@@ -1,0 +1,9 @@
+System,Tokens/word EN,Tokens/word FR,Number fidelity %,Over-generation %,Copied source %,Empty %,Length ratio (hyp/ref)
+Transformer (scratch),1.51,1.6,85.46,2.6,0.4,0.0,1.05
+mT5-small (fine-tuned),1.72,2.03,90.54,2.2,1.0,0.0,1.05
+Llama-3.2-1B (zero-shot),1.47,1.92,88.44,2.6,2.4,0.2,0.94
+Llama-3.2-1B (3-shot),1.47,1.92,94.75,2.6,0.4,0.0,1.05
+Llama-3.2-1B (LoRA),1.47,1.92,92.99,2.4,0.6,0.0,1.04
+Gemma-3-1B (zero-shot),1.44,1.68,85.81,2.2,1.2,0.0,1.01
+Gemma-3-1B (3-shot),1.44,1.68,88.44,1.6,0.6,0.0,0.98
+Gemma-3-1B (LoRA),1.44,1.68,94.4,2.0,1.6,0.0,1.11

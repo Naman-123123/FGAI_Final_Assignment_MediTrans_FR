@@ -1,0 +1,236 @@
+8.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.1s 3 0.00s - to python to disable frozen modules.
+8.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.8s 7 0.00s - to python to disable frozen modules.
+8.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.5s 9 transformers 5.16.1 | peft 0.20.0 | torch 2.11.0+cu128
+15.7s 10 Resuming from previous run: /kaggle/input/notebooks/namantheking2008/notebookd67e9bea90
+15.7s 11 Working directory: /kaggle/working
+48.5s 12 torch 2.11.0+cu128 | transformers 5.16.1 | device: Tesla T4 | bf16: False
+48.5s 13 {
+48.5s 14 "n_train": 40000,
+48.5s 15 "n_val": 1000,
+48.5s 16 "n_test": 500,
+48.5s 17 "min_words": 3,
+48.5s 18 "max_words": 50,
+48.5s 19 "max_len_ratio": 2.5,
+48.5s 20 "spm_vocab": 8000,
+48.5s 21 "tf_d_model": 256,
+48.5s 22 "tf_heads": 4,
+48.5s 23 "tf_layers": 4,
+48.5s 24 "tf_ff": 1024,
+48.5s 25 "tf_dropout": 0.1,
+48.5s 26 "tf_epochs": 15,
+48.5s 27 "tf_patience": 3,
+48.5s 28 "tf_batch": 64,
+48.5s 29 "tf_warmup": 1000,
+48.5s 30 "tf_max_len": 128,
+48.5s 31 "mt5_name": "google/mt5-small",
+48.5s 32 "mt5_epochs": 3,
+48.5s 33 "mt5_batch": 16,
+48.5s 34 "mt5_lr": 0.0005,
+48.5s 35 "mt5_max_len": 128,
+48.5s 36 "mt5_prefix": "translate English to French: ",
+48.5s 37 "llama_name": "unsloth/Llama-3.2-1B-Instruct",
+48.5s 38 "gemma_name": "unsloth/gemma-3-1b-it",
+48.5s 39 "llm_train": 4000,
+48.5s 40 "llm_batch": 4,
+48.5s 41 "llm_accum": 2,
+48.5s 42 "llm_lr": 0.0002,
+48.5s 43 "llm_max_len": 256,
+48.5s 44 "lora_r": 16,
+48.5s 45 "lora_alpha": 32,
+48.5s 46 "lora_dropout": 0.05,
+48.5s 47 "n_shots": 3,
+48.5s 48 "max_new_tokens": 128,
+48.5s 49 "eval_batch": 32,
+48.5s 50 "llm_eval_batch": 16,
+48.5s 51 "temps": [
+48.5s 52 0.3,
+48.5s 53 0.7,
+48.5s 54 1.0,
+48.5s 55 1.5
+48.5s 56 ],
+48.5s 57 "temp_n": 200
+48.5s 58 }
+48.7s 59 Downloading EMEA en-fr ...
+54.5s 60 Raw sentence pairs: 1,092,568
+54.9s 61 Unique English sentences: 290,538  (73.4% duplicates — leaflets repeat boilerplate)
+99.0s 62 step   pairs
+99.0s 63 raw pairs 1092568
+99.0s 64 non-empty 1092568
+99.0s 65 source ≠ target  929314
+99.0s 66 mostly alphabetic  875234
+99.0s 67 3–50 words  719755
+99.0s 68 length ratio ≤ 2.5  699437
+99.0s 69 de-duplicated  220280
+99.7s 70 Removing 155 training pairs that overlap with val/test
+101.9s 71 SentencePiece vocab: 8000
+101.9s 72 ['▁Des', 'k', 't', 'op', '▁v', 'ide', 'oc', 'on', 'fer', 'enc', 'ing', '▁serv', 'ices', '▁will', '▁be', '▁ext', 'ended', '▁in', '▁2001', '▁to']
+102.0s 73 [skip] 'transformer' already finished — results loaded from results/state.json
+102.0s 74 [skip] 'mt5' already finished — results loaded from results/state.json
+102.3s 75 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+102.3s 76 
+102.3s 77 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+128.3s 78 Llama-3.2-1B: 1236 M parameters | eos ids [128001, 128008, 128009]
+128.3s 79 Example prompt:
+128.3s 80 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+128.3s 81 
+128.3s 82 Cutting Knowledge Date: December 2023
+128.3s 83 Today Date: 31 Oct 2026
+128.3s 84 
+128.3s 85 <|eot_id|><|start_header_id|>user<|end_header_id|>
+128.3s 86 
+128.3s 87 Translate the following English sentence from a medical document into French. Reply with the French translation only.
+128.3s 88 
+128.3s 89 English: Desktop videoconferencing services will be extended in 2001 to facilitate conferences between the EMEA, European Commission and national competent authorities.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+128.3s 90 
+128.3s 91 
+231.8s 92 Llama-3.2-1B (zero-shot)         BLEU  20.83 | chrF  47.62 | infer   103.2s
+421.7s 93 Llama-3.2-1B (3-shot)            BLEU  24.62 | chrF  53.03 | infer   187.5s
+426.5s 94 LoRA trainable parameters: 11.27 M
+526.8s 95 step 50/500 loss 1.248 |     98s
+625.0s 96 step 100/500 loss 1.031 |    197s
+722.6s 97 step 150/500 loss 1.048 |    294s
+816.8s 98 step 200/500 loss 1.018 |    388s
+913.7s 99 step 250/500 loss 1.017 |    485s
+1009.9s 100 step 300/500 loss 1.006 |    581s
+1108.7s 101 step 350/500 loss 0.918 |    680s
+1201.7s 102 step 400/500 loss 0.935 |    773s
+1300.6s 103 step 450/500 loss 0.938 |    872s
+1397.1s 104 step 500/500 loss 0.841 |    969s
+1500.5s 105 Llama-3.2-1B (LoRA)              BLEU  36.92 | chrF  61.55 | infer   103.0s
+1544.0s 106 T=0.3  BLEU  36.00 | chrF  60.75
+1589.4s 107 T=0.7  BLEU  29.46 | chrF  55.62
+1644.3s 108 T=1.0  BLEU  18.06 | chrF  44.86
+1740.5s 109 T=1.5  BLEU   0.19 | chrF  15.42
+1751.5s 110 Gemma-3-1B: 1000 M parameters | eos ids [1, 106]
+1751.5s 111 Example prompt:
+1751.5s 112 <bos><start_of_turn>user
+1751.5s 113 Translate the following English sentence from a medical document into French. Reply with the French translation only.
+1751.5s 114 
+1751.5s 115 English: Desktop videoconferencing services will be extended in 2001 to facilitate conferences between the EMEA, European Commission and national competent authorities.<end_of_turn>
+1751.5s 116 <start_of_turn>model
+1751.5s 117 
+1841.7s 118 Gemma-3-1B (zero-shot)           BLEU  29.49 | chrF  56.07 | infer    83.4s
+1983.0s 119 Gemma-3-1B (3-shot)              BLEU  30.96 | chrF  56.57 | infer   139.3s
+1987.3s 120 LoRA trainable parameters: 13.05 M
+2060.5s 121 step 50/500 loss 1.452 |     72s
+2132.4s 122 step 100/500 loss 1.061 |    143s
+2202.9s 123 step 150/500 loss 1.054 |    214s
+2272.0s 124 step 200/500 loss 1.036 |    283s
+2342.2s 125 step 250/500 loss 1.043 |    353s
+2412.1s 126 step 300/500 loss 1.041 |    423s
+2485.5s 127 step 350/500 loss 0.932 |    496s
+2553.4s 128 step 400/500 loss 0.960 |    564s
+2624.8s 129 step 450/500 loss 0.989 |    636s
+2694.7s 130 step 500/500 loss 0.884 |    706s
+2798.0s 131 Gemma-3-1B (LoRA)                BLEU  39.19 | chrF  63.01 | infer   103.0s
+2834.2s 132 T=0.3  BLEU  38.71 | chrF  62.87
+2869.2s 133 T=0.7  BLEU  30.09 | chrF  56.80
+2912.8s 134 T=1.0  BLEU  19.97 | chrF  46.10
+3000.9s 135 T=1.5  BLEU   0.31 | chrF  15.86
+3005.7s 136 Source   : Desktop videoconferencing services will be extended in 2001 to facilitate conferences between the EMEA, European Commission and national competent authorities.
+3005.7s 137 Reference: Les services de vidéoconférence de bureau seront étoffés en 2001 pour faciliter les conférences entre l'EMEA, la Commission européenne et les autorités nationales compétentes.
+3005.7s 138 ### Test sentence 0
+3005.7s 139 * **Source (EN):** Desktop videoconferencing services will be extended in 2001 to facilitate conferences between the EMEA, European Commission and national competent authorities.
+3005.7s 140 * **Reference (FR):** Les services de vidéoconférence de bureau seront étoffés en 2001 pour faciliter les conférences entre l'EMEA, la Commission européenne et les autorités nationales compétentes.
+3005.7s 141 * **Transformer (scratch):** Les boutêtements voconférant les services de conférence au cours du traitement par l’EMEA, la Commission européenne et les autorités compétentes.
+3005.7s 142 * **mT5-small (fine-tuned):** Les services de consultations de l’EMEA seront ouverts en 2001 afin de faciliter les événements entre l’EMEA, la Commission européenne et les autorités nationales compétentes.
+3005.7s 143 * **Llama-3.2-1B (zero-shot):** Desktop vidéoconférences médicales seront étendues en 2001 pour faciliter les conférences entre le EMEA, la Commission européenne et les autorités compétentes nationales.
+3005.7s 144 * **Llama-3.2-1B (3-shot):** Services de vidéoconférence à distance sur ordinateur seront étendus en 2001 pour faciliter les conférences entre le EMEA, la Commission européenne et les autorités compétentes nationales.
+3005.7s 145 * **Llama-3.2-1B (LoRA):** Les services de vidéoconférence sur ordinateur seront étendus en 2001 afin de faciliter les réunions entre le comité des affaires étrangères, la Commission européenne et les autorités compétentes nationales.
+3005.7s 146 * **Gemma-3-1B (zero-shot):** Les services de visioconférence sur bureau seront étendus en 2001 pour faciliter les conférences entre l'EMEA, la Commission européenne et les autorités nationales compétentes.
+3005.7s 147 * **Gemma-3-1B (3-shot):** Les services de visioconférence sur bureau seront étendus en 2001 pour faciliter les conférences entre l’EMEA, la Commission européenne et les autorités compétentes nationales.
+3005.7s 148 * **Gemma-3-1B (LoRA):** Les services de videoconférence sur bureau seront étendus en 2001 afin de faciliter les conférences entre l’EMEA, la Commission européenne et les autorités compétentes nationales.
+3005.7s 149 
+3005.7s 150 ### Test sentence 1
+3005.7s 151 * **Source (EN):** 17 Posology as substitution therapy For convenience, patients receiving aliskiren and hydrochlorothiazide from separate tablets may be switched to a fixed combination tablet of Rasilez HCT containing the same component doses.
+3005.7s 152 * **Reference (FR):** Posologie en traitement de substitution Pour des raisons de commodité, les patients traités par l’aliskiren et l'hydrochlorothiazide sous forme de comprimés séparés peuvent prendre à la place un comprimé de l’association fixe Rasilez HCT contenant les mêmes doses de composants.
+3005.7s 153 * **Transformer (scratch):** Posologie comme traitement substitutif Pour les patients recevant l’aliskiren et l’hydrochlorothiazide, les patients sous forme de comprimés séparés peuvent être passés à un comprimé fixe de Rasilez HCT contenant la même dose.
+3005.7s 154 * **mT5-small (fine-tuned):** Posologie en tant que traitement substitutif Pour le convenience, les patients recevant l’aliskiren et l’hydrochlorothiazide de comprimés séparés peuvent être arrêtés à un comprimé fixe de Rasilez HCT contenant les mêmes doses.
+3005.7s 155 * **Llama-3.2-1B (zero-shot):** 17 - Posologie : traitement de remplacement Pour la convenience, les patients recevant aliskiren et hydrochlorothiazide provenant de tablettes séparées peuvent être transférés à une tablette combinée fixe de Rasilez HCT contenant les mêmes doses de composants.
+3005.7s 156 * **Llama-3.2-1B (3-shot):** 17 Posologie comme thérapie de substitution Pour la convenance, les patients recevant aliskiren et hydrochlorothiazide de tablettes séparées peuvent être transférés à une tablette combinée fixe de Rasilez HCT contenant les mêmes doses de composants.
+3005.7s 157 * **Llama-3.2-1B (LoRA):** Posologie comme traitement de substitution Pour la facilité, les patients recevant l’aliskirine et le chlorothiazide en comprimés séparés peuvent être substitués par un comprimé de Rasilez HCT contenant les mêmes doses de composants.
+3005.7s 158 * **Gemma-3-1B (zero-shot):** La posologie est un traitement de substitution. Pour faciliter la prise, les patients recevant l'aliskiren et la hydrochlorothiazide en deux comprimés séparés peuvent être changés vers une combinaison de comprimés Rasilez HCT avec les mêmes doses de composants.
+3005.7s 159 * **Gemma-3-1B (3-shot):** La posologie de 17 doses est une substitution. Pour faciliter la prise, les patients recevant l'aliskiren et la hydrochlorothiazide en différentes comprimés peuvent être changés vers une combinaison de comprimés fixes de Rasilez HCT contenant les mêmes doses composées.
+3005.7s 160 * **Gemma-3-1B (LoRA):** Posologie en traitement substitutif Pour commodité, les patients recevant l’aliskiren et la hydrochlorothiazide en comprimés séparés peuvent être changés vers une association de comprimés de Rasilez HCT de la même dose.
+3005.7s 161 
+3005.7s 162 ### Test sentence 4
+3005.7s 163 * **Source (EN):** Screw the needle onto the syringe barrel in a clockwise direction while pressing in the 2 plastic beads to lock the needle securely onto the syringe.
+3005.7s 164 * **Reference (FR):** Visser l'aiguille sur le corps de la seringue dans le sens des aiguilles d'une montre tout en appuyant sur les 2 billes de plastique afin de verrouiller solidement l'aiguille sur la seringue.
+3005.7s 165 * **Transformer (scratch):** Vérifiez que l’aiguille soit l’extrémité dans une pointe dans un sens des aiguilles d’une montrement, alors que le flacon en plastique sera ensuite localisé l’aiguille soit sécurisé dans la seringue.
+3005.7s 166 * **mT5-small (fine-tuned):** Sécurité de l’aiguille sur le flacon de seringue en direction de l’heure où l’aiguille est appuyée sur les 2 boîtes en plastique pour ouvrir l’aiguille à l’aide de l’aiguille.
+3005.7s 167 * **Llama-3.2-1B (zero-shot):** S'engager le couteau dans le tambour de l'ampoule dans le sens des aiguilles d'une montre, tandis que vous appliquez le 2ème morceau de plastique pour tenir fermement le couteau dans l'ampoule.
+3005.7s 168 * **Llama-3.2-1B (3-shot):** Tapez le couteau de seringue sur le tambour de la seringue dans le sens des aiguilles d'une montre, tandis que vous appuyez sur les deux bâtons en plastique pour fixer le couteau de seringue sur la seringue de manière sécurisée.
+3005.7s 169 * **Llama-3.2-1B (LoRA):** Fixer l’aiguille sur la bouchée de la seringue en tournoisant dans le sens des aiguilles d’une montre, tout en pressant les deux bouchons en plastique pour fixer l’aiguille sur la seringue de manière sécurisée.
+3005.7s 170 * **Gemma-3-1B (zero-shot):** Visser le fil dans le barrel du seringue dans une direction horaire, en appuyant sur les deux beads en plastique pour verrouiller fermement le fil dans la seringue.
+3005.7s 171 * **Gemma-3-1B (3-shot):** Écrivez la aiguille dans le trou du canon du seringue dans le sens des aiguilles d’une montre, en appuyant sur les deux beads en plastique pour verrouiller l’aiguille en toute sécurité dans la seringue.
+3005.7s 172 * **Gemma-3-1B (LoRA):** Faites glisser l’aiguille sur la barrel de la seringue dans la direction des aiguilles, en appuyant sur les deux gants en plastique pour verrouiller l’aiguille sur la seringue.
+3005.7s 173 
+3005.7s 174 ### Test sentence 7
+3005.7s 175 * **Source (EN):** What Lantus is and what it is used for 2.
+3005.7s 176 * **Reference (FR):** Qu'est -ce que Lantus et dans quel cas est -il utilisé 2.
+3005.7s 177 * **Transformer (scratch):** Qu'est -ce que Lantus et dans quel cas est -il utilisé 2.
+3005.7s 178 * **mT5-small (fine-tuned):** Qu’est -ce que Lantus et dans quel cas est -il utilisé 2.
+3005.7s 179 * **Llama-3.2-1B (zero-shot):** Quel est Lantus et pour quoi il est utilisé ?
+3005.7s 180 * **Llama-3.2-1B (3-shot):** Qu'est-ce que Lantus et pour quoi il est utilisé ?
+3005.7s 181 * **Llama-3.2-1B (LoRA):** Qu’est -ce que Lantus et dans quel cas est -il utilisé 2.
+3005.7s 182 * **Gemma-3-1B (zero-shot):** Qu'est-ce que Lantus et pour quoi il est utilisé ?
+3005.7s 183 * **Gemma-3-1B (3-shot):** Qu’est-ce que Lantus et pour quoi il est utilisé ?
+3005.7s 184 * **Gemma-3-1B (LoRA):** Qu’est -ce que Lantus et dans quel cas est -il utilisé 2.
+3005.7s 185 
+3005.7s 186 ### Test sentence 2
+3005.7s 187 * **Source (EN):** ed The most often seen undesirable effect in insulin-treated patients is a change in blood glucose levels.
+3005.7s 188 * **Reference (FR):** L’effet indésirable le plus fréquent chez les patients insulino-traités est une fluctuation de la glycémie.
+3005.7s 189 * **Transformer (scratch):** L’effet indésirable le plus souvent observé chez les patients traités par l’insuline est une modification du taux de glucose dans le sang.
+3005.7s 190 * **mT5-small (fine-tuned):** L’effet indésirable le plus fréquemment observé chez les patients traités par insuline est une modification des taux de glucose sanguin.
+3005.7s 191 * **Llama-3.2-1B (zero-shot):** Le plus souvent venu comme effet indésirable dans les patients traités à l'insuline est une modification des niveaux de glucose dans le sang.
+3005.7s 192 * **Llama-3.2-1B (3-shot):** L'effet le plus souvent observé dans les patients traités à l'insuline est une modification des niveaux de glucose dans le sang.
+3005.7s 193 * **Llama-3.2-1B (LoRA):** L’effet indésirable le plus fréquent chez les patients traités par l’insuline est une modification des taux de glucose dans le sang.
+3005.7s 194 * **Gemma-3-1B (zero-shot):** Les effets indésirables les plus fréquemment observés chez les patients traités par l'insuline sont une variation des niveaux de glucose dans le sang.
+3005.7s 195 * **Gemma-3-1B (3-shot):** Le plus souvent, l’effet indésirable le plus fréquemment observé chez les patients traités par l’insuline est une variation des niveaux de glycémie.
+3005.7s 196 * **Gemma-3-1B (LoRA):** Les effets indésirables les plus fréquemment observés chez les patients traités par l’insuline sont une augmentation de la glycémie.
+3005.7s 197 
+3005.7s 198 ### Test sentence 3
+3005.7s 199 * **Source (EN):** The full EPAR for Atriance can be found here.
+3005.7s 200 * **Reference (FR):** L’EPAR complet pour Atriance est disponible ici.
+3005.7s 201 * **Transformer (scratch):** L’EPAR complet relatif à Atriance est disponible ici.
+3005.7s 202 * **mT5-small (fine-tuned):** L’EPAR complet relatif à Atriance est disponible ici.
+3005.7s 203 * **Llama-3.2-1B (zero-shot):** Le full EPAR de Atriance peut être trouvé ici.
+3005.7s 204 * **Llama-3.2-1B (3-shot):** Le full EPAR pour Atriance peut être trouvé ici.
+3005.7s 205 * **Llama-3.2-1B (LoRA):** L’EPAR complet pour Atriance est disponible ici.
+3005.7s 206 * **Gemma-3-1B (zero-shot):** La consultation complète d'Atriance est disponible ici.
+3005.7s 207 * **Gemma-3-1B (3-shot):** Le document complet sur Atriance peut être trouvé ici.
+3005.7s 208 * **Gemma-3-1B (LoRA):** L’EPAR complet concernant Atriance est disponible ici.
+3005.7s 209 
+3006.6s 210 | System                   | Architecture    | Adaptation           |   BLEU |   chrF |   Params (M) |   Trainable (M) |   Train time (min) |   Inference (s, test set) |   ms / sentence |
+3006.6s 211 |:-------------------------|:----------------|:---------------------|-------:|-------:|-------------:|----------------:|-------------------:|--------------------------:|----------------:|
+3006.6s 212 | Transformer (scratch)    | Encoder–decoder | Trained from scratch |  37.14 |  60.31 |         9.42 |            9.42 |               7.02 |                      6.5  |           13    |
+3006.6s 213 | mT5-small (fine-tuned)   | Encoder–decoder | Full fine-tuning     |  39.32 |  63.49 |       300.18 |          300.18 |              78.19 |                     18.62 |           37.24 |
+3006.6s 214 | Llama-3.2-1B (zero-shot) | Decoder-only    | Zero-shot prompting  |  20.83 |  47.62 |      1235.81 |            0    |               0    |                    103.18 |          206.36 |
+3006.6s 215 | Llama-3.2-1B (3-shot)    | Decoder-only    | 3-shot prompting     |  24.62 |  53.03 |      1235.81 |            0    |               0    |                    187.53 |          375.06 |
+3006.6s 216 | Llama-3.2-1B (LoRA)      | Decoder-only    | LoRA fine-tuning     |  36.92 |  61.55 |      1235.81 |           11.27 |              16.14 |                    103    |          205.99 |
+3006.6s 217 | Gemma-3-1B (zero-shot)   | Decoder-only    | Zero-shot prompting  |  29.49 |  56.07 |       999.89 |            0    |               0    |                     83.43 |          166.86 |
+3006.6s 218 | Gemma-3-1B (3-shot)      | Decoder-only    | 3-shot prompting     |  30.96 |  56.57 |       999.89 |            0    |               0    |                    139.25 |          278.5  |
+3006.6s 219 | Gemma-3-1B (LoRA)        | Decoder-only    | LoRA fine-tuning     |  39.19 |  63.01 |       999.89 |           13.05 |              11.76 |                    103.02 |          206.04 |
+3007.1s 220 Saved meditrans_fr_results.zip
+3012.7s 221 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+3012.7s 222 cells[i][c] = re.sub('\\\\\|', '|', cell)
+3012.9s 223 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+3012.9s 224 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+3013.6s 225 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+3013.8s 226 [NbConvertApp] Writing 1054903 bytes to __notebook__.ipynb
+3016.2s 227 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+3017.0s 228 [NbConvertApp] Support files will be in __results___files/
+3017.0s 229 [NbConvertApp] Making directory __results___files
+3017.0s 230 [NbConvertApp] Making directory __results___files
+3017.0s 231 [NbConvertApp] Making directory __results___files
+3017.0s 232 [NbConvertApp] Making directory __results___files
+3017.0s 233 [NbConvertApp] Making directory __results___files
+3017.0s 234 [NbConvertApp] Making directory __results___files
+3017.0s 235 [NbConvertApp] Making directory __results___files
+3017.0s 236 [NbConvertApp] Writing 826081 bytes to __results__.html

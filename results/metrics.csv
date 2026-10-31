@@ -1,0 +1,9 @@
+System,Architecture,Adaptation,BLEU,chrF,Params (M),Trainable (M),Train time (min),"Inference (s, test set)",ms / sentence
+Transformer (scratch),Encoder–decoder,Trained from scratch,37.14,60.31,9.42,9.42,7.02,6.5,13.0
+mT5-small (fine-tuned),Encoder–decoder,Full fine-tuning,39.32,63.49,300.18,300.18,78.19,18.62,37.24
+Llama-3.2-1B (zero-shot),Decoder-only,Zero-shot prompting,20.83,47.62,1235.81,0.0,0.0,103.18,206.36
+Llama-3.2-1B (3-shot),Decoder-only,3-shot prompting,24.62,53.03,1235.81,0.0,0.0,187.53,375.06
+Llama-3.2-1B (LoRA),Decoder-only,LoRA fine-tuning,36.92,61.55,1235.81,11.27,16.14,103.0,205.99
+Gemma-3-1B (zero-shot),Decoder-only,Zero-shot prompting,29.49,56.07,999.89,0.0,0.0,83.43,166.86
+Gemma-3-1B (3-shot),Decoder-only,3-shot prompting,30.96,56.57,999.89,0.0,0.0,139.25,278.5
+Gemma-3-1B (LoRA),Decoder-only,LoRA fine-tuning,39.19,63.01,999.89,13.05,11.76,103.02,206.04

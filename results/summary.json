@@ -1,0 +1,267 @@
+{
+ "metrics": [
+  {
+   "System": "Transformer (scratch)",
+   "Architecture": "Encoder–decoder",
+   "Adaptation": "Trained from scratch",
+   "BLEU": 37.14,
+   "chrF": 60.31,
+   "Params (M)": 9.42,
+   "Trainable (M)": 9.42,
+   "Train time (min)": 7.02,
+   "Inference (s, test set)": 6.5,
+   "ms / sentence": 13.0
+  },
+  {
+   "System": "mT5-small (fine-tuned)",
+   "Architecture": "Encoder–decoder",
+   "Adaptation": "Full fine-tuning",
+   "BLEU": 39.32,
+   "chrF": 63.49,
+   "Params (M)": 300.18,
+   "Trainable (M)": 300.18,
+   "Train time (min)": 78.19,
+   "Inference (s, test set)": 18.62,
+   "ms / sentence": 37.24
+  },
+  {
+   "System": "Llama-3.2-1B (zero-shot)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "Zero-shot prompting",
+   "BLEU": 20.83,
+   "chrF": 47.62,
+   "Params (M)": 1235.81,
+   "Trainable (M)": 0.0,
+   "Train time (min)": 0.0,
+   "Inference (s, test set)": 103.18,
+   "ms / sentence": 206.36
+  },
+  {
+   "System": "Llama-3.2-1B (3-shot)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "3-shot prompting",
+   "BLEU": 24.62,
+   "chrF": 53.03,
+   "Params (M)": 1235.81,
+   "Trainable (M)": 0.0,
+   "Train time (min)": 0.0,
+   "Inference (s, test set)": 187.53,
+   "ms / sentence": 375.06
+  },
+  {
+   "System": "Llama-3.2-1B (LoRA)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "LoRA fine-tuning",
+   "BLEU": 36.92,
+   "chrF": 61.55,
+   "Params (M)": 1235.81,
+   "Trainable (M)": 11.27,
+   "Train time (min)": 16.14,
+   "Inference (s, test set)": 103.0,
+   "ms / sentence": 205.99
+  },
+  {
+   "System": "Gemma-3-1B (zero-shot)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "Zero-shot prompting",
+   "BLEU": 29.49,
+   "chrF": 56.07,
+   "Params (M)": 999.89,
+   "Trainable (M)": 0.0,
+   "Train time (min)": 0.0,
+   "Inference (s, test set)": 83.43,
+   "ms / sentence": 166.86
+  },
+  {
+   "System": "Gemma-3-1B (3-shot)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "3-shot prompting",
+   "BLEU": 30.96,
+   "chrF": 56.57,
+   "Params (M)": 999.89,
+   "Trainable (M)": 0.0,
+   "Train time (min)": 0.0,
+   "Inference (s, test set)": 139.25,
+   "ms / sentence": 278.5
+  },
+  {
+   "System": "Gemma-3-1B (LoRA)",
+   "Architecture": "Decoder-only",
+   "Adaptation": "LoRA fine-tuning",
+   "BLEU": 39.19,
+   "chrF": 63.01,
+   "Params (M)": 999.89,
+   "Trainable (M)": 13.05,
+   "Train time (min)": 11.76,
+   "Inference (s, test set)": 103.02,
+   "ms / sentence": 206.04
+  }
+ ],
+ "diagnostics": [
+  {
+   "System": "Transformer (scratch)",
+   "Tokens/word EN": 1.51,
+   "Tokens/word FR": 1.6,
+   "Number fidelity %": 85.46,
+   "Over-generation %": 2.6,
+   "Copied source %": 0.4,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.05
+  },
+  {
+   "System": "mT5-small (fine-tuned)",
+   "Tokens/word EN": 1.72,
+   "Tokens/word FR": 2.03,
+   "Number fidelity %": 90.54,
+   "Over-generation %": 2.2,
+   "Copied source %": 1.0,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.05
+  },
+  {
+   "System": "Llama-3.2-1B (zero-shot)",
+   "Tokens/word EN": 1.47,
+   "Tokens/word FR": 1.92,
+   "Number fidelity %": 88.44,
+   "Over-generation %": 2.6,
+   "Copied source %": 2.4,
+   "Empty %": 0.2,
+   "Length ratio (hyp/ref)": 0.94
+  },
+  {
+   "System": "Llama-3.2-1B (3-shot)",
+   "Tokens/word EN": 1.47,
+   "Tokens/word FR": 1.92,
+   "Number fidelity %": 94.75,
+   "Over-generation %": 2.6,
+   "Copied source %": 0.4,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.05
+  },
+  {
+   "System": "Llama-3.2-1B (LoRA)",
+   "Tokens/word EN": 1.47,
+   "Tokens/word FR": 1.92,
+   "Number fidelity %": 92.99,
+   "Over-generation %": 2.4,
+   "Copied source %": 0.6,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.04
+  },
+  {
+   "System": "Gemma-3-1B (zero-shot)",
+   "Tokens/word EN": 1.44,
+   "Tokens/word FR": 1.68,
+   "Number fidelity %": 85.81,
+   "Over-generation %": 2.2,
+   "Copied source %": 1.2,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.01
+  },
+  {
+   "System": "Gemma-3-1B (3-shot)",
+   "Tokens/word EN": 1.44,
+   "Tokens/word FR": 1.68,
+   "Number fidelity %": 88.44,
+   "Over-generation %": 1.6,
+   "Copied source %": 0.6,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 0.98
+  },
+  {
+   "System": "Gemma-3-1B (LoRA)",
+   "Tokens/word EN": 1.44,
+   "Tokens/word FR": 1.68,
+   "Number fidelity %": 94.4,
+   "Over-generation %": 2.0,
+   "Copied source %": 1.6,
+   "Empty %": 0.0,
+   "Length ratio (hyp/ref)": 1.11
+  }
+ ],
+ "temperature_bleu": [
+  {
+   "System": "Gemma-3-1B (LoRA)",
+   "0.0": 39.25,
+   "0.3": 38.71,
+   "0.7": 30.09,
+   "1.0": 19.97,
+   "1.5": 0.31
+  },
+  {
+   "System": "Llama-3.2-1B (LoRA)",
+   "0.0": 37.45,
+   "0.3": 36.0,
+   "0.7": 29.46,
+   "1.0": 18.06,
+   "1.5": 0.19
+  },
+  {
+   "System": "Transformer (scratch)",
+   "0.0": 36.89,
+   "0.3": 36.28,
+   "0.7": 32.23,
+   "1.0": 20.77,
+   "1.5": 0.3
+  },
+  {
+   "System": "mT5-small (fine-tuned)",
+   "0.0": 38.14,
+   "0.3": 37.25,
+   "0.7": 35.29,
+   "1.0": 29.47,
+   "1.5": 6.37
+  }
+ ],
+ "env": {
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.16.1"
+ },
+ "config": {
+  "n_train": 40000,
+  "n_val": 1000,
+  "n_test": 500,
+  "min_words": 3,
+  "max_words": 50,
+  "max_len_ratio": 2.5,
+  "spm_vocab": 8000,
+  "tf_d_model": 256,
+  "tf_heads": 4,
+  "tf_layers": 4,
+  "tf_ff": 1024,
+  "tf_dropout": 0.1,
+  "tf_epochs": 15,
+  "tf_patience": 3,
+  "tf_batch": 64,
+  "tf_warmup": 1000,
+  "tf_max_len": 128,
+  "mt5_name": "google/mt5-small",
+  "mt5_epochs": 3,
+  "mt5_batch": 16,
+  "mt5_lr": 0.0005,
+  "mt5_max_len": 128,
+  "mt5_prefix": "translate English to French: ",
+  "llama_name": "unsloth/Llama-3.2-1B-Instruct",
+  "gemma_name": "unsloth/gemma-3-1b-it",
+  "llm_train": 4000,
+  "llm_batch": 4,
+  "llm_accum": 2,
+  "llm_lr": 0.0002,
+  "llm_max_len": 256,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "n_shots": 3,
+  "max_new_tokens": 128,
+  "eval_batch": 32,
+  "llm_eval_batch": 16,
+  "temps": [
+   0.3,
+   0.7,
+   1.0,
+   1.5
+  ],
+  "temp_n": 200
+ }
+}
